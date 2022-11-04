@@ -5,4 +5,5 @@
     <node pkg="laser_simulator" type="laser_sim_node" name="laser_simulator" output="screen">
         <rosparam file="$(find laser_simulator)/launch/mockamap_lidar_sim.yaml" command="load" />
     </node>
+    
 </launch>
