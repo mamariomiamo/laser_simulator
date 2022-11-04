@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <!-- <include file="$(find laser_simulator)/launch/rviz.launch"/> -->
+
+    <node pkg="laser_simulator" type="laser_sim_node" name="laser_simulator" output="screen">
+        <rosparam file="$(find laser_simulator)/launch/ego_lidar_sim.yaml" command="load" />
+    </node>
+
+    <!-- <node pkg="laser_simulator" type="tf2_listener" name="my_tf2_listener" output="screen">
+        <param name="cloud_in_topic" value="/laser_simulator/local_pointcloud"/>
+        <param name="cloud_out_topic" value="/laser_simulator/local_cloud_world"/>
+        <param name="publish_rate" value="20"/>
+        
+    </node> -->
+</launch>

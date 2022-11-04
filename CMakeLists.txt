@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   geometry_msgs
   nav_msgs
+  tf2_sensor_msgs
 )
 
 catkin_package(
@@ -41,5 +42,15 @@ add_executable(
 
 target_link_libraries( 
   transmit_odom_node
+  ${catkin_LIBRARIES}
+)
+
+add_executable(
+  tf2_listener
+  src/tf2_listener.cpp
+)
+
+target_link_libraries( 
+  tf2_listener
   ${catkin_LIBRARIES}
 )
