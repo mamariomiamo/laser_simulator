@@ -10,7 +10,7 @@ ros::Publisher local_cloud_world_pub;
 
 void cloudcallback(const sensor_msgs::PointCloud2 &local_cloud)
 {
-  std::cout << "in call back " << std::endl;
+  // std::cout << "in call back " << std::endl;
   tf2::doTransform(local_cloud, local_cloud_world, transformStamped);
   local_cloud_world_pub.publish(local_cloud_world);
 }
